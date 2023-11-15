@@ -33,3 +33,16 @@ class CountrySerializer(serializers.ModelSerializer):
             "cities"
             ]
 
+
+class FileUploadSerializer(serializers.ModelSerializer):
+
+       class Meta:
+              model = UploadedFile
+              fields = "__all__"
+      
+       
+class SalesDataSerializer(serializers.ModelSerializer):
+
+       class Meta:
+              model = SalesData
+              fields = ['date', 'product', 'sales_number', 'revenue']
